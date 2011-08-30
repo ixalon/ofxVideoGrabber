@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/7/trunk/ofxVideoGrabber/libs/linux/include/dc1394/linux
+END
+control.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/7/trunk/ofxVideoGrabber/libs/linux/include/dc1394/linux/control.h
+END
+capture.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/7/trunk/ofxVideoGrabber/libs/linux/include/dc1394/linux/capture.h
+END

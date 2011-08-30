@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/7/trunk/ofxVideoGrabber/libs/linux/include/dc1394/vendor
+END
+avt.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/7/trunk/ofxVideoGrabber/libs/linux/include/dc1394/vendor/avt.h
+END
+pixelink.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/7/trunk/ofxVideoGrabber/libs/linux/include/dc1394/vendor/pixelink.h
+END
+basler_sff.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/7/trunk/ofxVideoGrabber/libs/linux/include/dc1394/vendor/basler_sff.h
+END
+basler.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/7/trunk/ofxVideoGrabber/libs/linux/include/dc1394/vendor/basler.h
+END

@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/ofxVideoGrabber/libs/osx/lib
+END
+libdc1394.a
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/8/trunk/ofxVideoGrabber/libs/osx/lib/libdc1394.a
+END

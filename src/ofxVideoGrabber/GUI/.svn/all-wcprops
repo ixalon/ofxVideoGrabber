@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/20/trunk/ofxVideoGrabber/src/GUI
+END
+guiTypeSlider.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/17/trunk/ofxVideoGrabber/src/GUI/guiTypeSlider.h
+END
+guiTypeText.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiTypeText.h
+END
+guiCustomImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiCustomImpl.h
+END
+guiXmlValue.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiXmlValue.h
+END
+guiTypeMultiToggle.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/17/trunk/ofxVideoGrabber/src/GUI/guiTypeMultiToggle.h
+END
+guiBaseObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/17/trunk/ofxVideoGrabber/src/GUI/guiBaseObject.h
+END
+guiTypePanel.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiTypePanel.h
+END
+guiTypeTextDropDown.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/17/trunk/ofxVideoGrabber/src/GUI/guiTypeTextDropDown.h
+END
+ofxControlPanel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/20/trunk/ofxVideoGrabber/src/GUI/ofxControlPanel.cpp
+END
+guiIncludes.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiIncludes.h
+END
+ofxControlPanel.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/20/trunk/ofxVideoGrabber/src/GUI/ofxControlPanel.h
+END
+guiType2DSlider.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/17/trunk/ofxVideoGrabber/src/GUI/guiType2DSlider.h
+END
+guiValue.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiValue.h
+END
+guiTypeCustom.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiTypeCustom.h
+END
+guiColor.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiColor.h
+END
+guiCallbacks.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiCallbacks.h
+END
+guiTextBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/17/trunk/ofxVideoGrabber/src/GUI/guiTextBase.h
+END
+guiTypeButtonSlider.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/17/trunk/ofxVideoGrabber/src/GUI/guiTypeButtonSlider.h
+END
+guiTypeDrawable.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/guiTypeDrawable.h
+END
+guiTypeToggle.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/17/trunk/ofxVideoGrabber/src/GUI/guiTypeToggle.h
+END
+simpleColor.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/5/trunk/ofxVideoGrabber/src/GUI/simpleColor.h
+END

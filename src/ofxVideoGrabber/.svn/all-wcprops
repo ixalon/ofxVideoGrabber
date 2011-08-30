@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/28/trunk/ofxVideoGrabber/src
+END
+ofxVideoGrabberSettings.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/20/trunk/ofxVideoGrabber/src/ofxVideoGrabberSettings.h
+END
+ofxVideoGrabberSDK.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/20/trunk/ofxVideoGrabber/src/ofxVideoGrabberSDK.h
+END
+testApp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/28/trunk/ofxVideoGrabber/src/testApp.cpp
+END
+ofxVideoGrabberFeature.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/ofxVideoGrabber/src/ofxVideoGrabberFeature.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/4/trunk/ofxVideoGrabber/src/main.cpp
+END
+testApp.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/28/trunk/ofxVideoGrabber/src/testApp.h
+END
+ofxIIDCSettings.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/17/trunk/ofxVideoGrabber/src/ofxIIDCSettings.cpp
+END
+ofxVideoGrabber.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/28/trunk/ofxVideoGrabber/src/ofxVideoGrabber.cpp
+END
+ofxVideoGrabberFeature.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/20/trunk/ofxVideoGrabber/src/ofxVideoGrabberFeature.h
+END
+ofxVideoGrabberSettings.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/20/trunk/ofxVideoGrabber/src/ofxVideoGrabberSettings.cpp
+END
+ofxIIDCSettings.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/ofxVideoGrabber/src/ofxIIDCSettings.h
+END
+ofxVideoGrabber.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/20/trunk/ofxVideoGrabber/src/ofxVideoGrabber.h
+END
