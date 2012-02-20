@@ -42,6 +42,9 @@ class ofxVideoGrabberSDK
         int availableFeatureAmount;
 		ofxVideoGrabberFeature* featureVals;
 		bool bVerbose;
+        
+        virtual const char *getCameraVendor() = 0;
+        virtual const char *getCameraModel() = 0;
 
     protected:
         bool bHasNewFrame;

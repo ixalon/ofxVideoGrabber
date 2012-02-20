@@ -11,7 +11,7 @@
 /* SDKs */
 #include "Libdc1394Grabber/Libdc1394Grabber.h"
 #include "ofxIIDCSettings.h"
-
+#include <stdio.h>
 
 class ofxVideoGrabber: public ofBaseVideo
 {
@@ -45,9 +45,14 @@ class ofxVideoGrabber: public ofBaseVideo
         void            update();
 		float 		    getHeight();
 		float 		    getWidth();
+        void            toggleRecord();
+        void writeString(const char *s);
+        void writeUInt64(UInt64 i);  
+        void writeUInt32(UInt32 i);  
+        void writeUInt16(UInt16 i);  
 
-
-
+        FILE *f;
+        UInt32          writtenFrames;
 
 
 

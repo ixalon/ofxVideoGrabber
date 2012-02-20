@@ -8,8 +8,8 @@ void testApp::exit()
 //--------------------------------------------------------------
 void testApp::setup(){
 
-	camWidth 		= 640;	// try to grab at this size.
-	camHeight 		= 480;
+	camWidth 		= 1920;	// try to grab at this size.
+	camHeight 		= 1440;
 	appWidth        = ofGetWidth();
 	appHeight       = ofGetHeight();
 	mytimeThen		= 0.0f;
@@ -23,18 +23,18 @@ void testApp::setup(){
 
 
     Libdc1394Grabber *sdk = new Libdc1394Grabber;
-	//sdk->setFormat7(VID_FORMAT7_0);
+	sdk->setFormat7(VID_FORMAT7_0);
 	sdk->listDevices();
 	sdk->setDiscardFrames(true);
-	sdk->set1394bMode(false);
-	//sdk->setROI(0,0,320,200);
+	sdk->set1394bMode(true);
+	sdk->setROI(0,0,camWidth,camHeight);
 	//sdk->setDeviceID("b09d01008bc69e:0");
 
 	ofxIIDCSettings *settings = new ofxIIDCSettings;
 	settings->setXMLFilename("mySettingsFile.xml");
 
 	vidGrabber.setVerbose(true);
-    bool result = vidGrabber.initGrabber( camWidth, camHeight, VID_FORMAT_Y16, VID_FORMAT_RGB, 30, true, sdk, settings );
+    bool result = vidGrabber.initGrabber( camWidth, camHeight, VID_FORMAT_GREYSCALE, VID_FORMAT_GREYSCALE, 50, true, sdk, settings );
 
     //bool result = vidGrabber.initGrabber( camWidth, camHeight, VID_FORMAT_YUV422, VID_FORMAT_RGB, 30 );
 	// or like this:
@@ -52,6 +52,9 @@ void testApp::setup(){
 
 }
 
+testApp::~testApp(){
+}
+
 //--------------------------------------------------------------
 void testApp::update(){
 
@@ -59,20 +62,22 @@ void testApp::update(){
 
 	vidGrabber.update();
 
-
 	if (vidGrabber.isFrameNew()){
-
         calculateCaptureFramerate();
 	}
 
-    sprintf(buf,"App framerate : %f",ofGetFrameRate());
+    sprintf(buf,"App framerate : %f%s",ofGetFrameRate(), vidGrabber.f ? " (RECORDING)" : "");
 
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
 	ofSetHexColor(0xffffff);
-	vidGrabber.draw(appWidth - camWidth,0);
+    
+    float fScale = ((float)appHeight / (float)camHeight);
+    int iDrawWidth = (int)floor((float)camWidth * fScale);
+    int iDrawHeight = (int)floor((float)camHeight * fScale);
+	vidGrabber.draw((appWidth - iDrawWidth)/2, 0, iDrawWidth, iDrawHeight);
 
 
     /* Framerate display */
@@ -99,7 +104,9 @@ void testApp::keyPressed  (int key){
 
 	if (key == 's' || key == 'S'){
 		vidGrabber.videoSettings();
-	}
+	} else if(key == 'r' || key == 'R') {
+        vidGrabber.toggleRecord();
+    }
 
 }
 

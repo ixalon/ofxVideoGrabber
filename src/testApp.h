@@ -8,7 +8,7 @@
 class testApp : public ofBaseApp{
 
 	public:
-
+        ~testApp();
 		void setup();
 		void update();
 		void draw();
@@ -23,8 +23,13 @@ class testApp : public ofBaseApp{
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
 		void windowResized(int w, int h);
+    
+        void createFileName(void);
 
 		ofxVideoGrabber 		vidGrabber;
+    
+        string                  mFileName;
+        float                   mTimestamp;
 
 		int 				camWidth;
 		int 				camHeight;

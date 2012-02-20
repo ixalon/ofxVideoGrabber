@@ -59,6 +59,9 @@ class Libdc1394Grabber : public ofxVideoGrabberSDK, public ofThread
 
         bool discardFrames;
 		bool bSet1394bMode;
+    
+        const char *getCameraVendor();
+        const char *getCameraModel();
 
 	private:
 

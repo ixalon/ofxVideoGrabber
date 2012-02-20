@@ -2,7 +2,7 @@
 #include "Libdc1394GrabberUtils.h"
 #include "Libdc1394GrabberFramerateHelper.h"
 #include "Libdc1394GrabberVideoFormatHelper.h"
-
+#include "format7.h"
 
 dc1394_t* Libdc1394Grabber::dc1394 = NULL;
 
@@ -483,6 +483,12 @@ bool Libdc1394Grabber::initCamera( int _width, int _height, dc1394video_mode_t _
 
 	if(bUseFormat7) {
         packet_size = DC1394_USE_MAX_AVAIL;
+        //uint32_t s;
+        //dc1394_format7_get_recommended_packet_size(camera, video_mode, &s);
+        //packet_size = s;
+        //ofLog(OF_LOG_VERBOSE,"Recommended packet size: %i", se);
+
+
         if(ROI_height==0) ROI_height = _height;
         if(ROI_width==0)  ROI_width  = _width;
         if(_frameRate!=-1) {
@@ -565,8 +571,17 @@ bool Libdc1394Grabber::initCamera( int _width, int _height, dc1394video_mode_t _
         dc1394_video_set_framerate(camera, framerate);
     }
 
-
-
+    
+#define PTGREY_FRAME_RATE_INQ 0x53c  
+#define PTGREY_FRAME_RATE 0x83c  
+#define readBits(x, pos, len) ((x >> (pos - len)) * ((1 << len) - 1))  
+    
+    unsigned int framerateInq;  
+    dc1394_get_control_register(camera, PTGREY_FRAME_RATE_INQ, &framerateInq);  
+    unsigned int minValue = readBits(framerateInq, 24, 12);  
+    minValue |= 0x82000000;  
+    dc1394_set_control_register(camera, PTGREY_FRAME_RATE, minValue);  
+    
 	if (dc1394_capture_setup(camera,4,DC1394_CAPTURE_FLAGS_DEFAULT)!=DC1394_SUCCESS)
 	{
 		ofLog(OF_LOG_FATAL_ERROR,"Unable to setup camera!\n\t - check that the video mode and framerate are supported by your camera.");
@@ -1246,3 +1261,15 @@ int Libdc1394Grabber::stringToFeature( string _featureName )
 {
 	return -1;
 }
+
+
+const char *Libdc1394Grabber::getCameraVendor() {
+    return camera->vendor;
+    
+}
+const char *Libdc1394Grabber::getCameraModel() {
+    return camera->model;
+}
+
+
+

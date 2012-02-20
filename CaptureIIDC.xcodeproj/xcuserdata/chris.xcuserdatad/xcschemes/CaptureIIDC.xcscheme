@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "emptyExampleDebug.app"
-               BlueprintName = "emptyExample"
-               ReferencedContainer = "container:emptyExample.xcodeproj">
+               BuildableName = "CaptureIIDC.app"
+               BlueprintName = "CaptureIIDC"
+               ReferencedContainer = "container:CaptureIIDC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,41 +28,49 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
+            BuildableName = "CaptureIIDC.app"
+            BlueprintName = "CaptureIIDC"
+            ReferencedContainer = "container:CaptureIIDC.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
-      displayScaleIsEnabled = "NO"
-      displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug">
+      buildConfiguration = "Debug"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "emptyExampleDebug.app"
-            BlueprintName = "emptyExample"
-            ReferencedContainer = "container:emptyExample.xcodeproj">
+            BuildableName = "CaptureIIDC.app"
+            BlueprintName = "CaptureIIDC"
+            ReferencedContainer = "container:CaptureIIDC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      displayScaleIsEnabled = "NO"
-      displayScale = "1.00"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release">
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "emptyExampleDebug.app"
-            BlueprintName = "emptyExample"
-            ReferencedContainer = "container:emptyExample.xcodeproj">
+            BuildableName = "CaptureIIDC.app"
+            BlueprintName = "CaptureIIDC"
+            ReferencedContainer = "container:CaptureIIDC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
