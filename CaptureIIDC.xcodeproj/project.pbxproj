@@ -20,6 +20,7 @@
 		832FCCF814F2D09B00B367E8 /* ofxVideoGrabberSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 832FCCEA14F2D09B00B367E8 /* ofxVideoGrabberSettings.cpp */; };
 		832FCCF914F2D09B00B367E8 /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 832FCCEC14F2D09B00B367E8 /* testApp.cpp */; };
 		832FCD1414F2D0C000B367E8 /* libdc1394.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832FCD1314F2D0C000B367E8 /* libdc1394.a */; };
+		83A8DF7C1AB6FE1B00D69A9F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8DF7B1AB6FE1B00D69A9F /* CoreVideo.framework */; };
 		83DA1BFA14E988F80018B8A7 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1BF314E988F80018B8A7 /* tinyxml.cpp */; };
 		83DA1BFB14E988F80018B8A7 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1BF514E988F80018B8A7 /* tinyxmlerror.cpp */; };
 		83DA1BFC14E988F80018B8A7 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83DA1BF614E988F80018B8A7 /* tinyxmlparser.cpp */; };
@@ -133,6 +134,7 @@
 		832FCD1014F2D0C000B367E8 /* pixelink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixelink.h; sourceTree = "<group>"; };
 		832FCD1114F2D0C000B367E8 /* video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video.h; sourceTree = "<group>"; };
 		832FCD1314F2D0C000B367E8 /* libdc1394.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdc1394.a; sourceTree = "<group>"; };
+		83A8DF7B1AB6FE1B00D69A9F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		83DA1BF114E988F80018B8A7 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		83DA1BF314E988F80018B8A7 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		83DA1BF414E988F80018B8A7 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A8DF7C1AB6FE1B00D69A9F /* CoreVideo.framework in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
@@ -396,6 +399,7 @@
 		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83A8DF7B1AB6FE1B00D69A9F /* CoreVideo.framework */,
 				E4C2424410CC5A17004149E2 /* AppKit.framework */,
 				E4C2424510CC5A17004149E2 /* Cocoa.framework */,
 				E4C2424610CC5A17004149E2 /* IOKit.framework */,
@@ -487,6 +491,8 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "CaptureIIDC" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
@@ -578,8 +584,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
@@ -597,12 +602,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					/usr/local/Cellar/libdc1394/2.2.2/include/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
 				);
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -610,8 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
@@ -631,12 +639,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					/usr/local/Cellar/libdc1394/2.2.2/include/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
 				);
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -722,6 +734,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"\"$(SRCROOT)/libs/osx/lib\"",
+					/usr/local/Cellar/libdc1394/2.2.2/lib/,
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../CaptureIIDC/libs/osx/lib\"";
 				PREBINDING = NO;
@@ -811,6 +824,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"\"$(SRCROOT)/libs/osx/lib\"",
+					/usr/local/Cellar/libdc1394/2.2.2/lib/,
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../CaptureIIDC/libs/osx/lib\"";
 				PREBINDING = NO;

@@ -121,7 +121,7 @@ void ofxVideoGrabber::toggleRecord() {
         writeUInt32(0); // LittleEndian (0 = Big endian)
         writeUInt32(width); // ImageWidth
         writeUInt32(height); // ImageHeight
-        writeUInt32(bpp); // PixelDepth
+        writeUInt32(bpp * 8); // PixelDepth
         writeUInt32(0); // FrameCount
                 
         struct passwd *pwent = getpwuid(getuid());

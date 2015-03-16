@@ -24,9 +24,9 @@ void ofxVideoGrabberSettings::setupVideoSettings(ofxVideoGrabberSDK* _videoGrabb
 //--------------------------------------------------------------------
 void ofxVideoGrabberSettings::setupGUIEvents()
 {
-    ofAddListener(ofEvents.mousePressed, this, &ofxVideoGrabberSettings::mousePressed);
-    ofAddListener(ofEvents.mouseDragged, this, &ofxVideoGrabberSettings::mouseDragged);
-    ofAddListener(ofEvents.mouseReleased, this, &ofxVideoGrabberSettings::mouseReleased);
+    ofAddListener(ofEvents().mousePressed, this, &ofxVideoGrabberSettings::mousePressed);
+    ofAddListener(ofEvents().mouseDragged, this, &ofxVideoGrabberSettings::mouseDragged);
+    ofAddListener(ofEvents().mouseReleased, this, &ofxVideoGrabberSettings::mouseReleased);
 }
 
 //--------------------------------------------------------------------
